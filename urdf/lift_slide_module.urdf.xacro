@@ -4,7 +4,7 @@
   <xacro:arg name="max_height" default="0.300"/>
   <xacro:arg name="plate_origin_x" default="0.000"/>
   <xacro:arg name="plate_origin_z" default="0.8100"/>
-  <xacro:arg name="plate_origin_y" default="0.000"/>
+  <xacro:arg name="plate_origin_y" default="0.0550"/>
   <xacro:arg name="ros2_control" default="false"/>
   <xacro:arg name="use_fake_hardware" default="true"/>
   <xacro:arg name="can_interface" default="can3"/>
