@@ -29,12 +29,12 @@ def generate_launch_description():
     )
     min_height_arg = DeclareLaunchArgument(
         'min_height',
-        default_value='-0.650',
+        default_value='-0.750',
         description='升降最小位移（米）'
     )
     max_height_arg = DeclareLaunchArgument(
         'max_height',
-        default_value='0.300',
+        default_value='0.400',
         description='升降最大位移（米）'
     )
 

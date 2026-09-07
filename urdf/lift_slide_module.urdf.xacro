@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="lift_slide_module">
-  <xacro:arg name="min_height" default="-0.650"/>
-  <xacro:arg name="max_height" default="0.300"/>
+  <xacro:arg name="min_height" default="-0.750"/>
+  <xacro:arg name="max_height" default="0.400"/>
   <xacro:arg name="plate_origin_x" default="0.000"/>
   <xacro:arg name="plate_origin_z" default="0.8100"/>
   <xacro:arg name="plate_origin_y" default="0.0550"/>
   <xacro:arg name="ros2_control" default="false"/>
   <xacro:arg name="use_fake_hardware" default="true"/>
   <xacro:arg name="can_interface" default="can3"/>
+  <xacro:arg name="calibration_file" default=""/>
   <!-- Keep integrated bringup's separate lift CAN args compatible with the new lift package. -->
   <xacro:arg name="lift_can_interface" default="$(arg can_interface)"/>
   <xacro:arg name="node_id" default="16"/>
@@ -181,6 +182,7 @@
     <xacro:include filename="$(find lift_slide_description)/urdf/lift_slide_ros2_control.urdf.xacro"/>
     <xacro:lift_slide_ros2_control
       can_interface="$(arg lift_can_interface)"
+      calibration_file="$(arg calibration_file)"
       node_id="$(arg lift_node_id)"
       use_fake_hardware="$(arg use_fake_hardware)"
       min_position_m="$(arg min_height)"

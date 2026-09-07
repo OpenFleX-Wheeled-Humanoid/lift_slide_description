@@ -38,7 +38,7 @@
 
 | 关节 | 类型 | 轴向 | 限位 |
 |------|------|------|------|
-| `lift_joint` | 移动副 | Z | -0.650 至 0.300 m |
+| `lift_joint` | 移动副 | Z | 软件范围 -0.750 至 0.400 m |
 | `chest_joint` | 固定 | - | - |
 | `left_joint0_base` | 固定 | - | - |
 | `right_joint0_base` | 固定 | - | - |
@@ -55,8 +55,8 @@ ros2 launch lift_slide_description display.launch.py
 |------|--------|------|
 | `use_joint_state_gui` | `true` | 是否启动 joint_state_publisher_gui |
 | `start_rviz` | `true` | 是否启动 RViz |
-| `min_height` | `-0.650` | 最小行程位置（米） |
-| `max_height` | `0.300` | 最大行程位置（米） |
+| `min_height` | `-0.750` | 软件最小位置（米） |
+| `max_height` | `0.400` | 软件最大位置（米） |
 
 ## 发布的 TF 坐标系
 

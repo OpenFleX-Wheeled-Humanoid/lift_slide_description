@@ -4,10 +4,11 @@
     name="lift_slide_ros2_control"
     params="
       can_interface:=^|can3
-      node_id:=^|1
+      node_id:=^|16
+      calibration_file:=^|
       use_fake_hardware:=^|true
-      min_position_m:=^|-0.650
-      max_position_m:=^|0.300
+      min_position_m:=^|-0.750
+      max_position_m:=^|0.400
       max_velocity_mps:=^|0.10
       counts_per_meter:=^|2000000.0
       counts_per_revolution:=^|10000.0
@@ -40,6 +41,7 @@
         <plugin>lift_slide_driver/LiftSlideHardwareInterface</plugin>
         <param name="can_interface">${can_interface}</param>
         <param name="node_id">${node_id}</param>
+        <param name="calibration_file">${calibration_file}</param>
         <param name="use_fake_hardware">${use_fake_hardware}</param>
         <param name="min_position_m">${min_position_m}</param>
         <param name="max_position_m">${max_position_m}</param>

@@ -38,7 +38,7 @@ URDF/Xacro description package for the lift-slide mechanism. Provides the robot 
 
 | Joint | Type | Axis | Limits |
 |-------|------|------|--------|
-| `lift_joint` | prismatic | Z | -0.650 to 0.300 m |
+| `lift_joint` | prismatic | Z | software range -0.750 to 0.400 m |
 | `chest_joint` | fixed | - | - |
 | `left_joint0_base` | fixed | - | - |
 | `right_joint0_base` | fixed | - | - |
@@ -55,8 +55,8 @@ ros2 launch lift_slide_description display.launch.py
 |----------|---------|-------------|
 | `use_joint_state_gui` | `true` | Launch joint_state_publisher_gui |
 | `start_rviz` | `true` | Launch RViz |
-| `min_height` | `-0.650` | Minimum travel position (m) |
-| `max_height` | `0.300` | Maximum travel position (m) |
+| `min_height` | `-0.750` | Software minimum position (m) |
+| `max_height` | `0.400` | Software maximum position (m) |
 
 ## TF Frames Published
 
